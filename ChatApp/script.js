@@ -1,5 +1,6 @@
 // Get DOM elements
 
+const usernameInput = document.getElementById('username-input');
 
 const messageInput = document.getElementById('message-input');
 
@@ -33,25 +34,27 @@ messageInput.addEventListener('keypress', function (e){
 
 //Function to send a message
 function sendMessage(){
+    const username = usernameInput.value;
     const message = messageInput.value;
-    if (message.trim()!==''){
+    if (username.trim()!=='' && message.trim()!==''){
         //Add message to array
-        messages.push(message);
+        messages.push({username,message});
 
         //Create message element and append to chat container
         const messageElement = document.createElement('p');
         
         messageElement.classList.add('message');
-        messageElement.textContent = message;
+        messageElement.textContent = `${username}:${message}`;
         chatMessages.appendChild(messageElement);
 
         document.getElementById("myDIV").appendChild(messageElement);
 
         //Clear input field
+        usernameInput.value = '';
         messageInput.value = '';
 
         //message cache
-        cacheMessage(message);
+        cacheMessage({username,message});
     } 
     
 }
@@ -71,26 +74,31 @@ function loadCachedMessages(){
     //Get cached message from local storage
     const cachedMessages = JSON.parse(localStorage.getItem('chatMessages'));
 
-    if(cachedMessages){
+    if(cachedMessages && cachedMessages.length>0){
 
-        cachedMessages.forEach(message=>{
+        cachedMessages.forEach((message)=>{
             const messageElement = document.createElement('p');
-            messageElement.textContent = message;
+            messageElement.textContent = `${message.username}:${message.message}`;
             chatMessages.appendChild(messageElement);
             document.getElementById("myDIV").appendChild(messageElement);
-            messageElement.style.color ='#000000';
+            messageElement.style.color ='#021f3e';
+            messageElement.style.fontFamily ='Nunito';
+            messageElement.style.fontWeight ='800';
+            messageElement.style.fontSize ='1.1rem';         
+           
         });
 
         
     }
 }
 
+resetbutton.addEventListener('click',resetChat);
 function resetChat(){
     chatMessages.innerHTML='';
 
-    localStorage.removeItem('chatMessages');
+    messages =[];
 
-    resetbutton.addEventListener('click',resetChat);
+    localStorage.removeItem('chatMessages');
 
     alert('Chat has been reset!');
    

@@ -19,13 +19,14 @@
       </nav>
 
       <main>
-        
-          <form class="mb-3" id="chatForm" onsubmit="handleSubmit(event)">
-            <label for="username" class="form-label">Username:</label>
-            <input type="text" class="form-control" id="username" required placeholder="abcd">
-            <button type="button" class="btn btn-primary w-100" id="add-button">Add</button>
+        <div class="container mt-4">
+          <form class="mb-3 bg-secondary rounded p-2" id="chatForm" onsubmit="handleSubmit(event)">
+            <label for="username" class="form-label text-white">Username:</label>
+            <input type="text" class="form-control mt-0 mb-2" id="username-input" required placeholder="abcd">
+            <button type="button" class="btn btn-primary w-100  position-static" id="add-button" onclick="submit()">Add</button>
           </form>
-        <p id="successMessage"></p>
+            <p id="successMessage"></p>
+        </div>
 
         <div class="container mt-3">          
           <div class="mt-4 p-5 bg-success text-black rounded h6 ">    
@@ -44,8 +45,9 @@
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="/ChatApp/chataccess.js"></script>
+
 <script src="/ChatApp/script.js"></script>
+<script src="/ChatApp/chataccess.js"></script>
 
 
 </html>
