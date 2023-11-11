@@ -7,47 +7,50 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-      <nav class="navbar navbar-brand navbar-dark bg-dark w-100">
+      <nav class="navbar navbar-brand w-100">
           <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img class="img-thumbnail" src="/ChatApp/img/Capture.PNG" alt="">
             </a>
             <ul class="navbar-nav">
-              <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-warning">Home</a></li>
             </ul>
           </div>
       </nav>
 
-      <main>
-        <div class="container mt-4">
-          <form class="mb-3 bg-secondary rounded p-2" id="chatForm" onsubmit="handleSubmit(event)">
-            <label for="username" class="form-label text-white">Username:</label>
-            <input type="text" class="form-control mt-0 mb-2" id="username-input" required placeholder="abcd">
-            <button type="button" class="btn btn-primary w-100  position-static" id="add-button" onclick="submit()">Add</button>
+    <main>
+      <div class="container mt-4 rounded p-4 text-white">
+        <div id="login-container" class="login-container mt-4">
+          <h2>Username:</h2>
+          <form id="login-form">
+            <input type="text" class="mb-2 w-100 rounded text-white" id="username" placeholder="Username">
+            
+            <button type="submit" class="b-1 w-100 rounded   text-dark fs-5 fw-bold">Login</button>
           </form>
-            <p id="successMessage"></p>
-        </div>
-
-        <div class="container mt-3">          
-          <div class="mt-4 p-5 bg-success text-black rounded h6 ">    
-            <div id="myDIV" style="height:auto;" class="mh-100 m-2 p-2 bg-warning"></div>        
-            <div id="chat-container">
-            <div id="chat-messages"></div>
-                <input type="text" class="form-control-lg" id="message-input" placeholder="Type your message...">
-                <button type="button" class="btn btn-primary" id="send-button">Send</button>
-                <button type="button" class="btn btn-danger" id="reset-button" onclick="resetChat()">Reset</button>
+        </div>    
+          <div id="chat-message-container" class="chat-container mt-4">
+            <h2>Chat App</h2>
+            <div id="chat-messages" class="message-container text-success fs-5  p-2 m-2">
+              <!-- Chat messages will be dynamically added here -->
             </div>
+            <form id="chat-form">
+              <input type="text" class="mb-2 w-100 rounded  text-white" id="message-input" placeholder="Type your message">
+              <button type="submit" class="b-2 w-100 rounded fs-5 fw-bold  text-dark">Send</button>
+              <button id="clear-button" class="b-3 w-100 rounded fs-5 fw-bold text-dark">Clear Chat</button>
+            </form>
+            
           </div>
-        </div>
         
-      </main>
+       </div>
+        
+    </main>
     
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script src="/ChatApp/script.js"></script>
-<script src="/ChatApp/chataccess.js"></script>
+
 
 
 </html>
