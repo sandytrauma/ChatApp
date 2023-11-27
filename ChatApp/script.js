@@ -2,8 +2,6 @@
 const messages = []; // Array to store chat messages
 let username = '';
 
-let friends = [];
-
 let loggedIn = false;
 
 // Function to handle user login
@@ -25,12 +23,6 @@ function handleLogin(event) {
   document.getElementById('chat-message-container').style.display = 'block'; // Show chat container
   document.getElementById('chat-messages').style.display = 'block'; // Show chat section
   
-}
-
-// Function to add friends
-
-function addFriend(friendName){
-  friends.push(friendName);
 }
 
 // Function to handle chat input
