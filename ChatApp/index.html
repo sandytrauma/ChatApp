@@ -1,55 +1,145 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatterbetter</title>
-    <link rel="stylesheet" href="/ChatApp/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-      <nav class="navbar navbar-brand w-100">
-          <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img class="img-thumbnail" src="/ChatApp/img/Capture.PNG" alt="">
-            </a>
-            <ul class="navbar-nav">
-              <li class="nav-item"><a href="#" class="nav-link text-warning">Home</a></li>
-            </ul>
-          </div>
-      </nav>
 
-    <main>
-      <div class="container mt-4 rounded p-4 text-white">
-        <div id="login-container" class="login-container mt-4">
-          <h2>Username:</h2>
-          <form id="login-form">
-            <input type="text" class="mb-2 w-100 rounded text-white" id="username" placeholder="Username">
-            
-            <button type="submit" class="b-1 w-100 rounded   text-dark fs-5 fw-bold">Login</button>
-          </form>
-        </div>    
-          <div id="chat-message-container" class="chat-container mt-4">
-            <h2>Chat App</h2>
-            <div id="chat-messages" class="message-container text-success fs-5  p-2 m-2">
-              <!-- Chat messages will be dynamically added here -->
-            </div>
-            <form id="chat-form">
-              <input type="text" class="mb-2 w-100 rounded  text-white" id="message-input" placeholder="Type your message">
-              <button type="submit" class="b-2 w-100 rounded fs-5 fw-bold  text-dark">Send</button>
-              <button id="clear-button" class="b-3 w-100 rounded fs-5 fw-bold text-dark">Clear Chat</button>
-            </form>
-            
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatterbetter</title>
+  <link rel="stylesheet" href="/ChatApp/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-brand w-100">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <img class="img-thumbnail" src="/ChatApp/img/Capture.PNG" alt="">
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="#" class="nav-link text-warning">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="modal-1">
+
+    <div class="container mt-3">
+      <h3>Top Headlines</h3>
+      <p>Click on the button to open the news item</p>
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Open News
+      </button>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
-        
-       </div>
-        
-    </main>
-    
+
+          <!-- Modal body -->
+          <div id="news-item" class="modal-body">
+            <div class="container news-item row mx-auto">
+              <div class="card m-4" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card m-4" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card m-4" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card m-4" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              <div class="card m-4" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main>
+    <div class="container mt-4 rounded p-4 text-white">
+      <div id="login-container" class="login-container mt-4">
+        <h2>Username:</h2>
+        <form id="login-form">
+          <input type="text" class="mb-2 w-100 rounded text-white" id="username" placeholder="Username">
+
+          <button type="submit" class="b-1 w-100 rounded   text-dark fs-5 fw-bold">Login</button>
+        </form>
+      </div>
+      <div id="chat-message-container" class="chat-container mt-4">
+        <h2>Chat App</h2>
+        <div id="chat-messages" class="message-container text-success fs-5  p-2 m-2">
+          <!-- Chat messages will be dynamically added here -->
+        </div>
+        <form id="chat-form">
+          <input type="text" class="mb-2 w-100 rounded  text-white" id="message-input" placeholder="Type your message">
+          <button type="submit" class="b-2 w-100 rounded fs-5 fw-bold  text-dark">Send</button>
+          <button id="clear-button" class="b-3 w-100 rounded fs-5 fw-bold text-dark">Clear Chat</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script src="/ChatApp/script.js"></script>
+
+<script src="/ChatApp/news.js"></script>
+
+
 
 
 

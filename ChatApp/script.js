@@ -73,6 +73,7 @@ function clearChat() {
 // Function to cache messages
 function cacheMessages() {
   localStorage.setItem('cachedMessages', JSON.stringify(messages));
+  
 }
 
 // Event listener for login form submission
@@ -83,3 +84,12 @@ document.getElementById('chat-form').addEventListener('submit', handleChatInput)
 
 // Event listener for clear button click
 document.getElementById('clear-button').addEventListener('click', clearChat);
+
+
+
+
+
+
+
+
+ 
