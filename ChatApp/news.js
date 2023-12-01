@@ -10,7 +10,7 @@ async function fetchData(query){
 }
 
 function displayNews(articles){
-    const newsContainer = document.getElementById("news-container");
+    const newsContainer = document.getElementById("news-card");
 
     articles.forEach(article =>{
         const newsItem = document.createElement("div");
@@ -24,10 +24,15 @@ function displayNews(articles){
   
         const source = document.createElement("p");
         source.textContent = `Source:${article.source.name}`;
+
+        const author = document.createElement("button")
+        author.textContent = article.author;
+        
   
         newsItem.appendChild(title);
         newsItem.appendChild(description);
         newsItem.appendChild(source);
+        newsItem.appendChild(author);
   
         newsContainer.appendChild(newsItem);
     })

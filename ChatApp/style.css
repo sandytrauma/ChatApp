@@ -73,15 +73,18 @@ body {
     transition: 0.310s;
 }
 
-.card:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    box-shadow: 1px 1px 1px 1px rgba(201, 202, 196, 0.4);
-}
+
 
 .news-item{
     text-decoration: none;
-    color: rgba(233, 245, 192, 0.925);
+    color: rgba(21, 48, 85, 0.925);
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+
+}
+
+.modal-body{
+    overflow-y: hidden;
 }
 
 
@@ -101,12 +104,4 @@ body {
 
 
 
-@media screen and (max-width:768px) {
-    img {
-        width:100%;
-    }
-    .container {
-        max-width:100%;
-        width: 100%;
-    }
-}
+
