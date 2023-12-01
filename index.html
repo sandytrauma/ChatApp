@@ -39,23 +39,25 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title text-info">Top Headlines for Indian Sub-Continent</h4>
+            <h3 class="modal-title text-white">Top Headlines for Indian Sub-Continent</h3>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
           <!-- Modal body -->
-          <div id="news-item" class="modal-body row justify-content-center" style="height: 1vh">
-            
-              <div id="news-card" class="news-article rounded mx-auto" style="width: 25rem;">
+          <div id="news-item" class="modal-body row" style="height: 100vh">
+            <div id="news-card-container" class="article-container">
+              <div id="news-card" class="news-article rounded fs-5" style="width: 100%;">                
                 
               </div>
-                      
-
+            </div>
             
+               
+             
           </div>
 
           <!-- Modal footer -->
           <div class="modal-footer">
+            <button type="button" onclick="autoScroll()" class="btn btn-info">AutoScroll</button>
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
           </div>
 
@@ -93,7 +95,7 @@
 
   </main>
 
-
+  
 
 </body>
 

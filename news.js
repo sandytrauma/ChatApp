@@ -25,7 +25,7 @@ function displayNews(articles){
         const source = document.createElement("p");
         source.textContent = `Source:${article.source.name}`;
 
-        const author = document.createElement("button")
+        const author = document.createElement("h5")
         author.textContent = article.author;
         
   
@@ -35,7 +35,13 @@ function displayNews(articles){
         newsItem.appendChild(author);
   
         newsContainer.appendChild(newsItem);
+
+      
+
     })
 }
 
 fetchData("India")
+
+
+
