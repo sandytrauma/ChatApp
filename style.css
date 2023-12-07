@@ -112,6 +112,15 @@ h5{
     color: aqua;
 }
 
+a{
+    text-decoration: none;
+    color: rgba(206, 202, 224, 0.911)!important;
+    text-shadow: 5px 5px 12px rgba(2, 2, 95, 0.911)!important;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    text-align: justify;
+}
+
 
 
 

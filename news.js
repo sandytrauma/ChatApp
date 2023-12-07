@@ -24,15 +24,25 @@ function displayNews(articles){
   
         const source = document.createElement("p");
         source.textContent = `Source:${article.source.name}`;
-
-        const author = document.createElement("h5")
-        author.textContent = article.author;
         
-  
+
+        const author = document.createElement("h5");
+        author.textContent = article.author;
+
+        
+        const anchorTag = document.createElement("a");        
+        anchorTag.setAttribute("href",article.url);
+        anchorTag.setAttribute("target","_blank");
+        anchorTag.click();
+        anchorTag.textContent = article.url;
+      
         newsItem.appendChild(title);
         newsItem.appendChild(description);
         newsItem.appendChild(source);
-        newsItem.appendChild(author);
+        newsItem.appendChild(author); 
+        newsItem.appendChild(anchorTag); 
+
+      
   
         newsContainer.appendChild(newsItem);
 
@@ -41,7 +51,7 @@ function displayNews(articles){
     })
 }
 
-fetchData("India")
+fetchData("All")
 
 
 
