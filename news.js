@@ -15,6 +15,7 @@ function displayNews(articles){
     articles.forEach(article =>{
         const newsItem = document.createElement("div");
         newsItem.classList.add("news-item");
+        
 
         const title = document.createElement("h2");
         title.textContent = article.title;
@@ -29,20 +30,24 @@ function displayNews(articles){
         const author = document.createElement("h5");
         author.textContent = article.author;
 
+        const image = document.createElement("img");
+        image.src = article.urlToImage;
+
         
         const anchorTag = document.createElement("a");        
         anchorTag.setAttribute("href",article.url);
         anchorTag.setAttribute("target","_blank");
         anchorTag.click();
         anchorTag.textContent = article.url;
-      
-        newsItem.appendChild(title);
+
+        
+        newsItem.appendChild(image);
+        newsItem.appendChild(title);        
         newsItem.appendChild(description);
         newsItem.appendChild(source);
-        newsItem.appendChild(author); 
-        newsItem.appendChild(anchorTag); 
-
-      
+        newsItem.appendChild(author);         
+        newsItem.appendChild(anchorTag);
+        
   
         newsContainer.appendChild(newsItem);
 
@@ -51,7 +56,7 @@ function displayNews(articles){
     })
 }
 
-fetchData("All")
+fetchData("Delhi")
 
 
 
