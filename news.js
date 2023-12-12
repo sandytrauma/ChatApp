@@ -1,16 +1,18 @@
 
 const API_KEY = "ad4ca56f3d3d4e4dbc19e5259d15a7bb";
-const url = "https://newsapi.org/v2/everything?q="
+const url = "https://newsapi.org/v2/everything?q=";
 
 async function fetchData(query){
     const res = await fetch(`${url}${query}&apiKey=${API_KEY}`) 
     const data = await res.json()
-    console.log(data)
+    console.log(data);
     displayNews(data.articles);
 }
 
 function displayNews(articles){
     const newsContainer = document.getElementById("news-card");
+    newsContainer.innerHTML = "";
+    
 
     articles.forEach(article =>{
         const newsItem = document.createElement("div");
@@ -38,9 +40,8 @@ function displayNews(articles){
         anchorTag.setAttribute("href",article.url);
         anchorTag.setAttribute("target","_blank");
         anchorTag.click();
-        anchorTag.textContent = article.url;
+        anchorTag.textContent = "Read More...";
 
-        
         newsItem.appendChild(image);
         newsItem.appendChild(title);        
         newsItem.appendChild(description);
@@ -53,10 +54,18 @@ function displayNews(articles){
 
       
 
-    })
+    });
 }
 
-fetchData("Delhi")
+    const searchForm = document.getElementById("searchForm");
+    searchForm.addEventListener("submit",function(event){
+    event.preventDefault();
+    const searchInput = document.getElementById("searchInput");
+    const searchTerm = searchInput.value;
+
+    fetchData(searchTerm);
+    searchInput.value ="";
+})
 
 
 
