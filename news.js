@@ -22,7 +22,7 @@ function displayNews(articles){
         const title = document.createElement("h2");
         title.textContent = article.title;
   
-        const description = document.createElement("p");
+        const description = document.createElement("marquee");
         description.textContent = article.description;
   
         const source = document.createElement("p");

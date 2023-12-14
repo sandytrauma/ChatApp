@@ -4,7 +4,7 @@
    
     /* Background styles */
 body {
-    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+    background-image: url('/img/neom-seX13AzLqls-unsplash.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,11 +28,11 @@ body {
 .modal-content{
     padding: 1.5rem;
     margin: 0 auto;
-    backdrop-filter: blur(8px) saturate(180%);
-    -webkit-backdrop-filter: blur(8px) saturate(180%);
-    background-color: rgba(248, 196, 196, 0.281) !important;
+    backdrop-filter: blur(2px) saturate(180%);
+    -webkit-backdrop-filter: blur(2px) saturate(180%);
+    background-color: rgba(86, 87, 110, 0.281) !important;
     border-radius: 12px;
-    border: 1px solid rgba(131, 128, 128, 0.767) !important;
+    border: 1px solid rgba(49, 49, 83, 0.726) !important;
     
 }
 
@@ -48,14 +48,15 @@ body {
 .b-3 {
     backdrop-filter: blur(8px) saturate(180%);
     -webkit-backdrop-filter: blur(8px) saturate(180%);
-    background-color: rgba(219, 192, 151, 0.596);
+    border: 0.5px!important;
+    background-color: rgba(129, 129, 105, 0.281);
     border-radius: 12px;
 }
 
 .message-container {
-    backdrop-filter: blur(8px) saturate(250%);
-    -webkit-backdrop-filter: blur(8px) saturate(250%);
-    background-color: rgba(238, 238, 60, 0.281) !important;
+    backdrop-filter: blur(2px) saturate(250%);
+    -webkit-backdrop-filter: blur(2px) saturate(250%);
+    background-color: rgba(86, 87, 110, 0.281) !important;
     border-radius: 12px;
     border: 1px solid rgba(201, 202, 196, 0.11) !important;
 }
@@ -65,9 +66,9 @@ body {
 .card-img-top{
     padding: 1.5rem;
     margin: 0 auto;
-    backdrop-filter: blur(12px) saturate(250%);
-    -webkit-backdrop-filter: blur(8px) saturate(250%)!important;
-    background-color: rgba(247, 238, 238, 0.089) !important;
+    backdrop-filter: blur(2px) saturate(250%);
+    -webkit-backdrop-filter: blur(2px) saturate(250%)!important;
+    background-color: rgba(86, 87, 110, 0.281) !important;
     border-radius: 12px;
     border: 1px solid rgba(248, 247, 247, 0.596) !important;
     
@@ -78,8 +79,8 @@ body {
     margin: 0 auto;
     background: rgba( 255, 255, 255, 0.1 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 18px );
-    -webkit-backdrop-filter: blur( 18px );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin: 5px;
@@ -133,8 +134,17 @@ img{
     height: auto;  
 }
 
-#searchForm {
-    padding: 1.5rem;
+#searchForm,
+.b-3-f{
+    margin: 0 auto;
+}
+
+.b-3-f {
+    margin-bottom: .4rem;
+}
+
+#searchInput {
+    padding: 0.5rem;
     margin: 0 auto;
     backdrop-filter: blur(8px) saturate(180%);
     -webkit-backdrop-filter: blur(8px) saturate(180%);
@@ -145,6 +155,55 @@ img{
     height: auto;
 }
 
+#resumeForm {
+    padding: 1.5rem;
+    margin: 0 auto;
+    backdrop-filter: blur(2px) saturate(180%);
+    -webkit-backdrop-filter: blur(2px) saturate(180%);
+    background-color: rgba(86, 87, 110, 0.281) !important;
+    border-radius: 12px;
+    border: 1px solid rgba(49, 49, 83, 0.726) !important;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+  }
+
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f3f1f1;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .b-4[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #resume {
+    margin-top: 40px;
+    background-color: #201f1f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 
 
 

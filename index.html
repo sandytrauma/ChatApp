@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatterbetter</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/resumebuilder.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
@@ -30,6 +32,11 @@
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
         Open News
       </button>
+      <div id="marquee" class="marquee">
+
+
+
+      </div>
     </div>
 
     <!-- The Modal -->
@@ -39,32 +46,32 @@
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h3 class="modal-title text-white">Top Headlines for Indian Sub-Continent</h3>
+            <h3 class="modal-title text-white">Search here for top headlines from all over the world</h3>
             <form id="searchForm">
               <input type="text" placeholder="Search News" id="searchInput">
-              <button type="submit" class="btn-success rounded justify-content-center">Search</button>
-            </form>  
+              <button type="submit" class="b-3-f btn btn-danger rounded justify-content-center">Search</button>
+            </form>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
           <!-- Modal body -->
           <div id="news-item" class="modal-body row" style="height: 100vh">
-            <div id="news-card-container" class="article-container">           
-              
-              <div id="news-card" class="news-article rounded fs-5" style="width: 100%;">  
-                         
-                
+            <div id="news-card-container" class="article-container">
+
+              <div id="news-card" class="news-article rounded fs-5" style="width: 100%;">
+
+
               </div>
-            
+
             </div>
-            
-               
-             
+
+
+
           </div>
 
           <!-- Modal footer -->
           <div class="modal-footer">
-          
+
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
           </div>
 
@@ -81,19 +88,18 @@
         <form id="login-form">
           <input type="text" class="mb-2 w-100 rounded text-white" id="username" placeholder="Username">
 
-          <button type="submit" class="b-1 w-100 rounded   text-dark fs-5 fw-bold">Login</button>
+          <button type="submit" class="b-1 rounded btn-info text-secondary fs-5 fw-bold">Login</button>
         </form>
       </div>
       <div id="chat-message-container" class="chat-container mt-4">
         <h2>Chat App</h2>
-        <div id="chat-messages" class="message-container text-success fs-5  p-2 m-2">
+        <div id="chat-messages" class="message-container text-info fs-5  p-2 m-2">
           <!-- Chat messages will be dynamically added here -->
         </div>
         <form id="chat-form">
           <input type="text" class="mb-2 w-100 rounded  text-white" id="message-input" placeholder="Type your message">
-          <button type="submit" class="b-2 w-100 rounded fs-5 fw-bold  text-dark">Send</button>
-          <button id="clear-button" class="b-3 w-100 rounded fs-5 fw-bold text-dark">Clear Chat</button>
-
+          <button type="submit" class="b-2 rounded fs-5 fw-bold btn-info text-secondary">Send</button>
+          <button id="clear-button" class="b-3 rounded fs-5 fw-bold btn-info text-secondary">Clear Chat</button>
         </form>
 
       </div>
@@ -102,7 +108,49 @@
 
   </main>
 
-  
+  <section class="resume-generator mt-4 rounded p-4 text-white">
+    <div class="container">
+      <form id="resumeForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+
+        <label for="education">Education:</label>
+        <input type="text" placeholder="college degree" id="education" required>
+        <input type="text" placeholder="highschool" id="highschool" required>
+        <input type="text" placeholder="metric" id="metric" required>
+
+        <label for="location">Language:</label>
+        <input type="number" class="w-100" placeholder="Hindi Scale_1-100" id="hindi_widthInput" min="0" step="10" required>
+        <input type="number" class="w-100" placeholder="English Scale_1-100" id="english_widthInput" min="0" step="10" required>
+        
+          <!-- Add more fields for experience, education, skills, etc. -->
+
+          <label for="profile">Profile:</label>
+          <input type="text" id="profile" required> 
+
+        <button type="submit" onclick="changeWidth()" class="b-4">Generate Resume</button>
+      </form>
+    </div>
+    
+    <div id="resume" class="mt-4 rounded p-4 text-white">
+
+    </div>
+
+  </section>
+
+
 
 </body>
 
@@ -113,8 +161,6 @@
 
 <script src="/news.js"></script>
 
-
-
-
+<script src="/resumebuilder.js"></script>
 
 </html>

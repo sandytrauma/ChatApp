@@ -34,6 +34,7 @@ function handleChatInput(event) {
     return;
   }
 
+
   const messageInput = document.getElementById('message-input');
   const message = messageInput.value;
 
