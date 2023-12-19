@@ -12,11 +12,19 @@
     const highschool = document.getElementById('highschool').value;
     const metric = document.getElementById('metric').value;
     const profile = document.getElementById('profile').value;
-    
-
+    const experience_1 = document.getElementById('experience-1').value;
+    const company_1 = document.getElementById('company-1').value;
+    const designation_1 = document.getElementById('designation-1').value;
+    const experience_2 = document.getElementById('experience-2').value;
+    const company_2 = document.getElementById('company-2').value;
+    const designation_2 = document.getElementById('designation-2').value;
+    const experience_3 = document.getElementById('experience-3').value;
+    const company_3 = document.getElementById('company-3').value;
+    const designation_3 = document.getElementById('designation-3').value;
   
        // Create the resume HTML
     const resumeHTML = `
+    <marquee>
       <h2>${name}</h2>
       <h3>${title}</h3>
       <p>Email: ${email}</p>
@@ -26,8 +34,9 @@
       <p>Education: ${education}</p>
       <p>Highschool: ${highschool}</p>
       <p>Metric: ${metric}</p>
-      
-      <div class="resume-container">
+      </marquee>
+      <div class="container-2">
+      <div id="resume-content" class="resume-container">
         <div class="left_side">
             <div class="profileDescription">
                 <div class="imgBox">
@@ -95,14 +104,30 @@
             </div>
             <div class="about">
                 <h2 class="title2">Experience</h2>
-                <div class="box">
+                <div class="box tex-content-justify">
                     <div class="year_company">
-                        <h5>2014 - Present</h5>
-                        <h5>Company Name</h5>
+                        <h5 class="fs-5">Experience:  <span> </span> <span>${experience_1}</span></h5>
+                        <h5 class="fs-5">Company Name:<span> </span> <span>${company_1}</span></h5>
                     </div>
                     <div class="text">
-                        <h4>Depot Manager</h4>
-                        <p>Delhi Integrated Multi Modal Transit System Limited</p>
+                        <h4>${designation_1}</h4>
+                                      
+                    </div>
+                    <div class="year_company">
+                        <h5>${experience_2}</h5>
+                        <h5>${company_2}</h5>
+                    </div>
+                    <div class="text">
+                        <h4>${designation_2}</h4>
+                                      
+                    </div>
+                    <div class="year_company">
+                        <h5>${experience_3}</h5>
+                        <h5>${company_3}</h5>
+                    </div>
+                    <div class="text">
+                        <h4>${designation_3}</h4>
+                                      
                     </div>
 
                 </div>
@@ -176,25 +201,19 @@
             </div>
         </div>
     </div>
+    </div>
+    <button id="back" onclick="back()" class="b-3 rounded fs-5 fw-bold btn-info text-secondary">Back</button>
+    <button onclick="downloadResume()">Download Resume Template</button>
     `;
 
     // Display the resume
-    document.getElementById('resume').innerHTML = resumeHTML;
+    document.getElementById('resumeForm').innerHTML = resumeHTML;
+    document.getElementById('back').addEventListener('click',function(){
+        window.location.href = window.location.href;
+    })
+    
+
   });
 
-  function changeWidth(){
-    const hindi = document.getElementById('hindi_widthInput');
-    const english = document.getElementById('english_widthInput');
-    const myBoxH = document.getElementById('wh');
-    const myBoxE = document.getElementById('we');
 
-    const widthValueH = hindi.value;
-    myBoxH.style.width = widthValueH + "px";
-
-    const widthValueE = english.value;
-    myBoxE.style.width = widthValueE + "px";
-
-    
-}
-
-changeWidth();
+  

@@ -87,6 +87,11 @@ document.getElementById('chat-form').addEventListener('submit', handleChatInput)
 document.getElementById('clear-button').addEventListener('click', clearChat);
 
 
+const video = document.getElementById('background-video');
+video.addEventListener('ended', function(){
+  this.currentTime = 0;
+  this.play();
+},false);
 
 
 

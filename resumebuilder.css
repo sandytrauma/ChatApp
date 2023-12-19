@@ -161,9 +161,9 @@ p {
 }
 
 .about .box {
-    display: flex;
+    display: block;
     flex-direction: row;
-    margin: 20px 0;
+    margin: 2px 0;
 }
 
 .about .box .year_company {
@@ -177,6 +177,8 @@ p {
 }
 
 .about .box .text {
+    text-align: justify;
+    padding: 1rem;
     text-transform: uppercase;
     color: #025778b4;
     font-size: 16px;
@@ -254,7 +256,10 @@ p {
 }
 
 @media (max-width:600px) {
-    .resume-containercontainer .left_side {
+    .resume-container .left_side {
+        width: 100%;
+        height:auto;
+        margin: 0 auto;
         border-bottom-left-radius: 0;
         border-top-right-radius: 5px;
     }
@@ -275,4 +280,36 @@ p {
     .skills .box {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+@media (max-width:400px) {
+
+
+    .resume-container {
+       max-width: fit-content;
+    }
+ 
+    .resume-container .left_side {
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+    }
+    .resume-container .right_side {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+    .about .box {
+        flex-direction: column;
+    }
+    .about .box .year_company {
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+    .interest ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skills .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
